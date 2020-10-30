@@ -1,0 +1,7 @@
+{
+  "name": "frontBlog",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
