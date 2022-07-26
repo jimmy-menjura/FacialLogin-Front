@@ -1,20 +1,34 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content padding>
+  <ion-row>
+    <ion-col size="12">
+      <div class="imgcontainer">
+        <img src="../../assets/images/camera.jpg" alt="" srcset="" alt="Avatar" class="avatar">
+      </div>
+    </ion-col>
+  </ion-row>
+ <form #loginForm=ngForm (ngSubmit)="login()">
+   <ion-item>
+     <ion-label  position="floating">
+       E-mail <ion-text color="danger">*</ion-text>
+     </ion-label>
+     <ion-input required type="email" name="email" [(ngModel)]="form.email"></ion-input>
+   </ion-item>
+   <ion-item>
+    <ion-label position="floating">Contraseña <ion-text color="danger">*</ion-text>
+    </ion-label>
+    <ion-input required type="password" name="password" [(ngModel)]="form.password"></ion-input>
+  </ion-item>
+  <ion-button expand="full" block color="primary" type="submit" style="margin-top: 20px;" [disabled]="loginForm.invalid">
+    Login &nbsp; <ion-icon name="log-in"></ion-icon>
+  </ion-button>
+  <ion-col size="12">
+    <ion-text color="primary" routerLink="/register" class="register_link" style="justify-content: center;">
+      <b>Aún no tiene cuenta click aqui</b>
+    </ion-text>
+  </ion-col>
+ </form>
+<div #loginImages style="display: none;"></div>
+<img src="" id="login_image"/>
+<img src="" id="img_from_server"/>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
 </ion-content>

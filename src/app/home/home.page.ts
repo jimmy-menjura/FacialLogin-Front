@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  form={
+    email:'',
+    password:''
+  }
   constructor() {}
 
+
+login(){
+  console.log("cuando se hace click")
+}
 }
